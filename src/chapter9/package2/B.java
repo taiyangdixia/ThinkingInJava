@@ -8,9 +8,4 @@ class B implements A{
 	public void print() { //必须添加public 否则会报错
 		System.out.println("this is B" + a);
 	}
-
-	public static void main(String[] args) {
-		B b = new B();
-		b.print();
-	}
 }
