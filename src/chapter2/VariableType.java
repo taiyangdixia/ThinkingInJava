@@ -8,7 +8,7 @@ public class VariableType {
 		System.out.println("this is a static block");
 	}
 	
-	//static Haha haha =  new Haha(); ±àÒë´í
+	//static Haha haha =  new Haha(); ç¼–è¯‘é”™
 	
 	class Haha{
 		static final int a=1;

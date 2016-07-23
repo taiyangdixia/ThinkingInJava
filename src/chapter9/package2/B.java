@@ -5,7 +5,7 @@ import chapter9.package1.A;
 class B implements A{
 	
 	@Override
-	public void print() { //±ØĞë¼ÓÉÏpublic ·ñÔò»á±¨´í
+	public void print() { //å¿…é¡»æ·»åŠ public å¦åˆ™ä¼šæŠ¥é”™
 		System.out.println("this is B" + a);
 	}
 

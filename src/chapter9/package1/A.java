@@ -4,5 +4,5 @@ public interface A {
 	int a = 1;
 	int b = 2;
 	
-	void print();//只能为public，默认也是public
+	void print();//榛樿涓簆ublic
 }
