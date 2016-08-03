@@ -3,6 +3,8 @@
  */
 package chapter21;
 
+import java.util.Date;
+
 /**
  * @author eva_shi
  *
@@ -18,6 +20,10 @@ public class Volatile {
 		Volatile v = new Volatile();
 		v.a++;
 		System.out.println(v.a);
+		String s ="()";
+		
+		System.out.println(s.replace("(", ":"));
+		System.out.println(new Date().toLocaleString());
 	}
 
 }
