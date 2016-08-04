@@ -14,11 +14,9 @@
 **后台线程**
 必须在线程start之前调用setDeamon()方法，才能将线程设置为后台线程。
 
-``` Thread deamon = new Thread(new SimpleTask());
-
+` Thread deamon = new Thread(new SimpleTask());
     deamon.setDeamon(true);
-
-deamon.start(); ```
+    deamon.start(); `
      
 **volatile**
 基本上如果一个域可能会被多个任务同时访问，或者这些任务中至少有一个是写入任务，就该将这个域设置为volatile的。读取和写入这个域都是针对内存，没有被缓存。
