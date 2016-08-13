@@ -43,4 +43,16 @@
 
     *要发生死锁的话，所有这些条件必须全部满足；要防止死锁的话，只要破坏其中一个即可。*
 
+**新类库中的构件**
+- CountDownLatch 向CountDownLatch对象设置一个初始计数值，任何在这个对象上调用await()的方法都将阻塞，直至这个计数值达到0。
+- CyclicBarrier 
+- DelayQueue
+- PriorityBlockingQueue Producer:queue.add(new blala); Consumer:queue.take().run() 无需显式同步
+- ScheduledThreadPoolExecutor schedule方法：运行一次任务；scheduleAtFixedRate()方法：每隔规则的时间重复执行任务。
+- Semaphore 允许n个任务同时访问资源,资源池
+- Exchanger 两个任务之间交换对象的栅栏。生产者和消费者各持有一个对象，在两个对象都完成Exchanger.exchange(obj)时，两个对象的obj可以交换。
+
+
+   
    *@evashi*
+
