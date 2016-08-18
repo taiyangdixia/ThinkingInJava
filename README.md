@@ -5,6 +5,31 @@
 - 接口的访问修饰符必须为public，默认是包访问控制权限。接口中的方法声明默认为public。
 - 实现接口中的方法必须声明为public，不能不写访问控制符。
 
+## Chapter 20	注解
+**Java内置标准注解**
+- @Override：覆盖超类中的方法
+- @Deprecated：编译器发出警告信息
+- @SuppressWarnings：关闭不当的警告信息
+
+**Java内置四种元注解**
+- @Target：表示该注解可以用在什么地方，可用ElementType指定。
+- @Retention：表示需要在什么级别保存该注解信息。用RetentionPolicy指定。SOURCE、CLASS、RUNTIME。
+- @Documented：将此注解包含在Javadoc中。
+- @Inherited：允许子类继承父类中的注解。
+
+**注解元素**
+
+```
+example:
+@Target(ElementType.METHOD)
+@Retention(RetentionPolicy.RUNTIME)
+public @interface UseCase {
+  public int id();
+  public String description() default "no description";
+}
+
+```
+<hr>
 
 ## Chapter 21	并发
 **让步**
@@ -17,7 +42,7 @@
 ` Thread deamon = new Thread(new SimpleTask());
     deamon.setDeamon(true);
     deamon.start(); `
-     
+
 **volatile**
 基本上如果一个域可能会被多个任务同时访问，或者这些任务中至少有一个是写入任务，就该将这个域设置为volatile的。读取和写入这个域都是针对内存，没有被缓存。
 
@@ -45,7 +70,7 @@
 
 **新类库中的构件**
 - CountDownLatch 向CountDownLatch对象设置一个初始计数值，任何在这个对象上调用await()的方法都将阻塞，直至这个计数值达到0。
-- CyclicBarrier 
+- CyclicBarrier
 - DelayQueue
 - PriorityBlockingQueue Producer:queue.add(new blala); Consumer:queue.take().run() 无需显式同步
 - ScheduledThreadPoolExecutor schedule方法：运行一次任务；scheduleAtFixedRate()方法：每隔规则的时间重复执行任务。
@@ -53,6 +78,5 @@
 - Exchanger 两个任务之间交换对象的栅栏。生产者和消费者各持有一个对象，在两个对象都完成Exchanger.exchange(obj)时，两个对象的obj可以交换。
 
 
-   
-   *@evashi*
 
+   *@evashi*
