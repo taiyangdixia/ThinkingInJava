@@ -5,6 +5,19 @@
 - 接口的访问修饰符必须为public，默认是包访问控制权限。接口中的方法声明默认为public。
 - 实现接口中的方法必须声明为public，不能不写访问控制符。
 
+**接口的继承extends**
+- 只能将extends应用在单一类，但是可以引用多个接口。
+
+```
+//这种引用多个接口的继承方式仅适用于接口的继承
+interface a{}
+interface b{}
+interface c extends a,b{}
+```
+## Chapter 10	内部类
+**.this**
+
+
 ## Chapter 20	注解
 **Java内置标准注解**
 - @Override：覆盖超类中的方法
