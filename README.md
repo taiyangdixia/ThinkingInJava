@@ -16,6 +16,46 @@ interface c extends a,b{}
 ```
 ## Chapter 10	内部类
 **.this**
+- 内部类中想要创建外部类对象，可以使用外部类的名字后面+".this"。
+```
+class Outer {
+    
+    class Inner {
+    	public Outer getOuter() {
+	    return Outer.this;
+	}
+    }
+
+    public Inner inner() {
+        return new Inner();
+    }
+
+    public void print() {
+    	System.out.println("test....this is outer class");
+    }
+
+    public static void main(String[] args) {
+    	Outer out = new Outer();
+	Outer.Inner in = out.inner();
+	in.getOuter().print();
+    }
+}
+
+```
+**.new**
+- 外部类中，要想创建内部类对象，需要使用外部类对象+“.new”的形式创建。
+```
+class Outer {
+
+    class Inner { ... }
+    
+    public static void main(String[] args) {
+        Outer out = new Outer();
+	Outer.Inner in = out.new Inner();//创建内部类对象
+    }
+}
+
+```
 
 
 ## Chapter 20	注解

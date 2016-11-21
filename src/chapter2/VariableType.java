@@ -1,5 +1,7 @@
 package chapter2;
 
+import java.util.HashSet;
+
 public class VariableType {
 
 	
@@ -24,6 +26,7 @@ public class VariableType {
 
 		int b=92;
 		print(b);
+		
 	}
 	
 	public static void print(double b){
